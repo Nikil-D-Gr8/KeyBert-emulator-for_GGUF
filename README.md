@@ -1,6 +1,6 @@
 # KeyBERT Emulator with GGUF Model
 
-This project is a KeyBERT emulator that identifies the top 5 keywords from a given text passage. It uses cosine similarity and dot product to measure the similarity between the passage and each word within it. The embeddings are generated using the Llama model in the GGUF format.
+This project is a KeyBERT emulator that identifies the top 5 keywords from a given text passage. It uses cosine similarity and dot product to measure the similarity between the passage and each word within it. The embeddings are generated using the Llama model in the GGUF format.This project was undertaken as the orginal KeyBERT model didn't have the ability to use the GGUF model.Feel free to contribute !
 
 ## Features
 
