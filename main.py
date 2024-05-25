@@ -1,6 +1,10 @@
+import time
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from llama_cpp import Llama
+
+# Start the timer
+start_time = time.time()
 
 # Load the model
 model_path = "bge-small-en-1.5-Q_4_K_M.gguf"
@@ -40,5 +44,12 @@ top_5_cosine = sorted(cosine_similarities, key=cosine_similarities.get, reverse=
 # Get top 5 words by dot product
 top_5_dot = sorted(dot_products, key=dot_products.get, reverse=True)[:5]
 
+# End the timer
+end_time = time.time()
+
+# Print results
 print("Top 5 words by cosine similarity:", top_5_cosine)
 print("Top 5 words by dot product:", top_5_dot)
+
+# Print the time taken to run the program
+print(f"Time taken to run the program: {end_time - start_time:.2f} seconds")
